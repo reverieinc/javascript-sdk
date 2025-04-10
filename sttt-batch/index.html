@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audio Transcription</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h2>Upload Audio for Transcription</h2>
+
+  <input type="file" id="audioFile" accept="audio/mp3" />
+
+  <label for="language">Select Language:</label>
+  <select id="language">
+    <option value="hi">Hindi</option>
+    <option value="as">Assamese</option>
+    <option value="bn">Bengali</option>
+    <option value="gu">Gujarati</option>
+    <option value="kn">Kannada</option>
+    <option value="ml">Malayalam</option>
+    <option value="mr">Marathi</option>
+    <option value="or">Odia</option>
+    <option value="pa">Punjabi</option>
+    <option value="ta">Tamil</option>
+    <option value="te">Telugu</option>
+    <option value="en">English</option>
+  </select>
+
+  <label for="subtitles">Include Subtitles?</label>
+  <select id="subtitles">
+    <option value="true">True</option>
+    <option value="false">False</option>
+  </select>
+
+  <button id="uploadAudio">Upload & Transcribe</button>
+  <button id="reset">Reset</button>
+
+  <div id="result"></div>
+
+  <script src="dist/bundle.js"></script>
+</body>
+</html>
