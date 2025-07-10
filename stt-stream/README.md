@@ -21,7 +21,7 @@
 
    - Run:
      ```sh
-     npm start
+     npm run dev
      ```
    - This will start the Webpack Dev Server on `http://localhost:3000/`
 
