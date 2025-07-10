@@ -1,8 +1,8 @@
-import ReverieClient from "reverie-client";
+import ReverieClient from "@reverieit/reverie-client";
 
 const reverieClient = new ReverieClient({
-    apiKey: "<YOUR-API-KEY>",
-    appId: "<YOUR-APP-ID>",
+    apiKey: "021f066ef38b4f7113289e23b8b9efc69ba9af6a",
+    appId: "com.tribhu11",
 });
 
 let finalResult = '';
@@ -62,16 +62,17 @@ const voiceText = (event) => {
         return;
     }
     let sttEvent = event.stt_event;
+    console.log({sttEvent});
     if (sttEvent.event === "FINAL_RESULT") {
-        finalResult = text;
+        finalResult = sttEvent.data;
         partialResult = "";
         auxHtml = auxHtml2 + " " + finalResult;
         updateTranscript();
     } else if (sttEvent.event === "PARTIAL_RESULTS") {
         if (["es-ES", "fr-FR", "ar-SA"].includes(languageSelect.value)) {
-            transcriptElement.value = text;
+            transcriptElement.value = sttEvent.data;
         }
-        partialResult = text;
+        partialResult = sttEvent.data;
         updateTranscript();
     }
 };
