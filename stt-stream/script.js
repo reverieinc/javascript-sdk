@@ -1,8 +1,8 @@
 import ReverieClient from "@reverieit/reverie-client";
 
 const reverieClient = new ReverieClient({
-    apiKey: "021f066ef38b4f7113289e23b8b9efc69ba9af6a",
-    appId: "com.tribhu11",
+    apiKey: "<YOUR-API-KEY>",
+    appId: "<YOUR-APP-ID>",
 });
 
 let finalResult = '';
